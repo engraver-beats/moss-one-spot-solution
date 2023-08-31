@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+      
+     #header{
+    
+
+    width: 100%;
+    height: 100vh ;
+    background-image: url(images/pexels-isaac-taylor-1557251.jpg);
+    background-size: cover;
+    background-position: center; 
+
+ 
+
+      }
+      body {
+  overflow: ;
+  align-items: center;
+  
+}
+      #footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+}
+      .container{
+    padding: 10px 10%;
+
+}
+nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+} .logo {
+    width: 140px;
+}
+nav ul li{
+    display: inline-block;
+    list-style: none;
+    margin: 10px 20px;
+}
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 18px;
+    position: relative;
+} nav ul li b {
+    color: #fff;
+    text-decoration: none;
+    font-size: 18px;
+    position: relative;
+} 
+
+nav ul li a::after {
+    content: '';
+    width: 100%;
+    height: 3px;
+    background: #fff700;
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    transition: 0.5s;
+    
+}
+nav ul li b::after {
+    content: '';
+    width: 0%;
+    height: 3px;
+    background: #fff700;
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    transition: 0.5s;
+    
+} nav ul li b:hover::after{
+    width: 100%;
+}
+ nav ul li a:hover::after{
+    width: 100%;
+}
+      body {
+        background-color: rgb(28, 28, 28);
+      }
+      .sidebar {
+        height: 100%;
+        width: 0;
+        position: fixed;
+        z-index: 1;
+        top: 0;
+        left: 0;
+        background-color: #111;
+        overflow-x: hidden;
+        padding-top: 60px;
+        transition: 0.5s;
+      }
+
+      /* Styling for the sidebar links */
+      .sidebar a {
+        padding: 8px 8px 8px 32px;
+        text-decoration: none;
+        font-size: 25px;
+        color: #818181;
+        display: block;
+      }
+
+      /* Change color on hover */
+      .sidebar a:hover {
+        color: #ffd000;
+      }
+
+      /* Position and style for the sidebar toggle button */
+      .sidebar .closebtn {
+        position: absolute;
+        top: 0;
+        right: 25px;
+        font-size: 36px;
+        margin-left: 50px;
+      }
+
+      /* Style for the main content */
+      #main {
+        margin-left: 0;
+        transition: margin-left .5s;
+        padding: 16px;
+        display: flex;
+        flex-wrap:wrap;
+        justify-content:center;
+      }
+      .card2 {
+  background-color: black;
+  
+  border: 3px solid yellow;
+  width: 100%;
+  height: 10%;
+  display: flex;
+  border-radius: 0%;
+  align-items: center;
+}
+      /* Add media query for responsiveness */
+      @media screen and (max-height: 450px) {
+        .sidebar {padding-top: 15px;}
+        .sidebar a {font-size: 18px;}
+      }
+
+      /* Card view style */
+      .card {
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+        max-width: 700px;
+        margin: 20px;
+        text-align: center;
+        font-family: arial;
+        background-color: #f1f1f1;
+        border-radius: 10%;
+        margin-left: 26%;
+      }
+
+      /* Card view image style */
+      .card img {
+        height: 200px;
+        width: 100%;
+        border-radius: 10%;
+      }
+
+      /* Card view text style */
+      .card h2 {
+        padding: 16px;
+      }
+      
+      .foot-text-centero{
+        width: 10%;
+        height: 10%;
+
+      }
+      .newlogo{
+        align-content: center;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="header">
+      <div class="container">
+      <nav>
+       
+  
+        <img src="mossgold.png" width="100" height="120" class="logo">
+
+        
+        <ul>
+          <li><b href="logingpt.html">HOME</b></li>
+          <li><b href="frame.html">NOTES</b></li>
+  
+          <li><b href="PYQ.html">PYQ</b></li>
+  
+          <li><a href="testquizfinal.html">TEST</a></li>
+  
+        </ul>
+      </div>
+      <div class="card2">
+        <div class="card-content"  style="margin: auto;">
+          
+          <label style="color: rgb(255, 255, 255);margin:auto;" for="language1" >Select Your Year:</label>
+    <select name="language1" id="language1" > 
+      <option value="" disabled selected>Select Your Year</option>
+      <option value="FIRST YEAR">FIRST YEAR</option>
+      <option value="SECOND YEAR">SECOND YEAR</option>
+      <option value="c++" >THIRD YEAR</option>
+      <option value="java" >FOURTH YEAR</option>
+    </select>
+    <label style="color: rgb(255, 255, 255)"; for="language2" >Select Your Subject:</label>
+    <select name="language2" id="language2" >
+      <option value="" disabled selected>Select Your Subject</option>
+      <option value="M1">M1</option>
+      <option value="M2">M2</option>
+      
+    </select>
+    <label style="color: rgb(255, 255, 255)"; for="language3" >Select Your PYQ Year:</label>
+    <select name="language3" id="language3" >
+      <option value="" disabled selected>Select Your PYQ Year</option>
+      <option value="INTEGRATION">2022</option>
+      <option value="DIFFERENTIATION">2021</option>
+      <option value="DIFFERENTIATION">2020</option>
+      <option value="DIFFERENTIATION">2019</option>
+      <option value="DIFFERENTIATION">2018</option>
+      <option value="DIFFERENTIATION">2017</option>
+      <option value="DIFFERENTIATION">2016</option>
+      <option value="DIFFERENTIATION">2015</option>
+      <option value="DIFFERENTIATION">2014</option>
+      <option value="DIFFERENTIATION">2013</option>
+      <option value="DIFFERENTIATION">2012</option>
+      <option value="DIFFERENTIATION">2011</option>
+
+      
+      
+    </select>
+    <button onclick="checkSelections()"  style="background-color: yellow; border-radius: 10px; font-weight: bold; color: black; ">GO</button>
+  
+
+<script>
+  function checkSelections() {
+    var language1 = document.getElementById("language1").value;
+    var language2 = document.getElementById("language2").value;
+    
+    if (language1 === "FIRST YEAR" && language2 === "M1" ) {
+        window.location = "testfinalcopy.html";
+      
+
+
+    } else {
+      alert("MOSS IS UNDER DEVELOPMENT WE WILL BE BETTER SOON !!! ");
+    }
+  }
+</script>
+</div>
+</div>
+<img src="QUIZ.png" width="300" height="300" class="newlogo">
+      
+       
+          
+      </html>
+      
+
+      </nav>
+   
+
+ 
+
+        </div>
+      </div>
+    </div>
+</body>
+</div>
+    </div>
+</html>

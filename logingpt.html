@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+      
+     #header{
+    
+
+    width: 100%;
+    height: 100vh ;
+    background-image: url(images/pexels-isaac-taylor-1557251.jpg);
+    background-size: cover;
+    background-position: center; 
+
+ 
+
+      }
+      body {
+  overflow: hidden;
+}
+      #footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+}
+      .container{
+    padding: 10px 10%;
+
+}
+nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+} .logo {
+    width: 140px;
+}
+nav ul li{
+    display: inline-block;
+    list-style: none;
+    margin: 10px 20px;
+}
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 18px;
+    position: relative;
+} nav ul li b {
+    color: #fff;
+    text-decoration: none;
+    font-size: 18px;
+    position: relative;
+} 
+
+nav ul li a::after {
+    content: '';
+    width: 100%;
+    height: 3px;
+    background: #fff700;
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    transition: 0.5s;
+    
+}
+nav ul li b::after {
+    content: '';
+    width: 0%;
+    height: 3px;
+    background: #fff700;
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    transition: 0.5s;
+    
+} nav ul li b:hover::after{
+    width: 100%;
+}
+ nav ul li a:hover::after{
+    width: 100%;
+}
+      body {
+        background-color: rgb(28, 28, 28);
+      }
+      .sidebar {
+        height: 100%;
+        width: 0;
+        position: fixed;
+        z-index: 1;
+        top: 0;
+        left: 0;
+        background-color: #111;
+        overflow-x: hidden;
+        padding-top: 60px;
+        transition: 0.5s;
+      }
+
+      /* Styling for the sidebar links */
+      .sidebar a {
+        padding: 8px 8px 8px 32px;
+        text-decoration: none;
+        font-size: 25px;
+        color: #818181;
+        display: block;
+      }
+
+      /* Change color on hover */
+      .sidebar a:hover {
+        color: #ffd000;
+      }
+
+      /* Position and style for the sidebar toggle button */
+      .sidebar .closebtn {
+        position: absolute;
+        top: 0;
+        right: 25px;
+        font-size: 36px;
+        margin-left: 50px;
+      }
+
+      /* Style for the main content */
+      #main {
+        margin-left: 0;
+        transition: margin-left .5s;
+        padding: 16px;
+        display: flex;
+        flex-wrap:wrap;
+        justify-content:center;
+      }
+
+      /* Add media query for responsiveness */
+      @media screen and (max-height: 450px) {
+        .sidebar {padding-top: 15px;}
+        .sidebar a {font-size: 18px;}
+      }
+
+      /* Card view style */
+      .card {
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+        max-width: 300px;
+        margin: 20px;
+        text-align: center;
+        font-family: arial;
+        background-color: #f1f1f1;
+        border-radius: 10%;
+      }
+
+      /* Card view image style */
+      .card img {
+        height: 200px;
+        width: 100%;
+        border-radius: 10%;
+      }
+
+      /* Card view text style */
+      .card h2 {
+        padding: 16px;
+      }
+      
+      .foot-text-centero{
+        width: 10%;
+        height: 10%;
+
+      }
+    </style>
+  </head>
+  <body>
+    <div id="header">
+      <div class="container">
+      <nav>
+       
+  
+        <img src="mossgold.png" width="100" height="120" class="logo">
+
+        
+        <ul>
+          <li><a href="logingpt.html">HOME</a></li>
+          <li><b href="frame.html">NOTES</b></li>
+  
+          <li><b href="">PYQ</b></li>
+  
+          <li><b href="">TEST</b></li>
+  
+        </ul>
+      </div>
+  
+
+      </nav>
+    <div class="sidebar">
+      <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
+      <a href="logingpt.html">HOME</a>
+      
+      <a href="frame.html">NOTES</a>
+      <a href="#">PYQ</a>
+      <a href="#">TEST</a>
+    </div>
+
+    <div id="main">
+      <button   style="background-color: rgb(255, 251, 0);font-size: large; font-weight: bold;" class="openbtn" onclick="openNav()">〣</button>
+      
+
+      <div class="card">
+        <a href="frame.html" >
+      
+        <img src="NOTES.jpg" alt="Quiz">
+        <h2>Notes</h2>
+      
+      </div>
+    </a>
+    <div class="card">
+      <a href="PYQ.html" >
+      <img src="Feb-Business_9.jpg" alt="Pyq">
+      <h2>Pyq</h2>
+    </div>
+  </a>
+      <div class="card">
+        <a href="testquizfinal.html" >
+        <img src="test.jpg" alt="Notes">
+        <h2>Test</h2>
+        </a>
+      </div>
+      
+      <div class="card">
+        <img src="community.jpg" alt="Pyq">
+        <h2>Community</h2>
+      </div>
+    
+    </div>
+
+    
+
+    <script>
+      function openNav() {
+        document.getElementById("main").style.marginLeft = "250px";
+        document.getElementsByClassName("sidebar")[0].style.width = "250px";
+      }
+
+      function closeNav() {
+        document.getElementById("main").style.marginLeft = "0";
+        document.getElementsByClassName("sidebar")[0].style.width = "0";
+      }
+    </script>
+    
+    
+      
+    
+  </body>
+  <div style="width: 65%; align-items: center; background-color: rgb(27, 26, 26); border-radius: 10px; padding: 20px; margin-left: 18%;border: 2px solid yellow;">
+    <button style="background-color: transparent; border:none; color: #f1f1f1;">
+      <i class="fa fa-star fa fa-star " aria-hidden="true"></i> Rate Us  
+    </button>
+  </div>
+  
+
+  <div id="footer">
+      <div style="display: flex; align-items: center; justify-content: center; min-height: 10vh; text-align: center; ">
+        <div class="foot-text-centero" style="background-color: rgb(255, 221, 0); width: 100%;">
+          <div class="card-body">
+            <p class='footer-link'style="font-size: 15px;">
+              &#169; 
+              <a href='MOSS.html'>
+   <strong> MATHS ONE SPOT SOLUTION</strong>
+    </a>
+    <strong>2023 . CRAFTED BY </strong>
+              <a href='index.html' >
+                <strong>  TEAM MOSS</strong>
+              </a>
+              . 
+              <strong>  " टीम मॉस द्वारा 
+                <strong>    प्यार के साथ</strong>
+              </a>
+   <strong>, शुक्रिया "</strong></a>
+    &hearts; 
+</p>
+</div>
+
+        </div>
+      </div>
+    </div>
+</body>
+</div>
+    </div>
+</html>
